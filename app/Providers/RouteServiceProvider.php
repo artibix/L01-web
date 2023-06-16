@@ -19,6 +19,9 @@ class RouteServiceProvider extends ServiceProvider
      */
     public const HOME = '/home';
 
+//    by artibix：方便使用在路由中使用简短的 Class@Method 格式
+    protected  $namespace =  'App\\Http\\Controllers';
+
     /**
      * Define your route model bindings, pattern filters, and other route configuration.
      *
@@ -34,6 +37,7 @@ class RouteServiceProvider extends ServiceProvider
                 ->group(base_path('routes/api.php'));
 
             Route::middleware('web')
+                ->namespace($this->namespace)
                 ->group(base_path('routes/web.php'));
         });
     }
