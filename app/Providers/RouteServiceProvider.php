@@ -17,7 +17,7 @@ class RouteServiceProvider extends ServiceProvider
      *
      * @var string
      */
-    public const HOME = '/home';
+    public const HOME = '/';
 
 //    by artibix：方便使用在路由中使用简短的 Class@Method 格式
     protected  $namespace =  'App\\Http\\Controllers';
