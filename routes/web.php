@@ -28,4 +28,8 @@ Route::post('login', 'SessionsController@store')->name('login');
 /* 注销 */
 Route::delete('logout', 'SessionsController@destroy')->name('logout');
 
+/* 确认邮箱 */
+Route::get('signup/confirm/{token}', 'UsersController@confirmEmail')->name('confirm_email');
+
+
 
