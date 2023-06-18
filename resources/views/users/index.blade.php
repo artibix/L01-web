@@ -1,5 +1,5 @@
 @extends('layouts.default')
-@section('title', '所有用户')
+@section('title', '用户列表')
 
 @section('content')
   <div class="offset-md-2 col-md-8">

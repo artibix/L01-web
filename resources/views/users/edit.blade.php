@@ -1,5 +1,5 @@
 @extends('layouts.default')
-@section('title', '更新个人资料')
+@section('title', '更新个人资料 - '.$user->name)
 
 @section('content')
   <div class="offset-md-2 col-md-8">

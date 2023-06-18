@@ -1,5 +1,5 @@
 @extends('layouts.default')
-@section('title', $user->name)
+@section('title', '用户首页 - '.$user->name)
 
 @section('content')
   <div class="row">
