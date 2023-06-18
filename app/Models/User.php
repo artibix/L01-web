@@ -69,14 +69,16 @@ class User extends Authenticatable
                     ->orderBy('created_at', 'desc');
     }
 
+    /* 关注的人 */
     public function followers()
     {
         return $this->belongsToMany(User::class, 'followers', 'user_id', 'follower_id');
     }
 
+    /* 粉丝 */
     public function followings()
     {
-        $this->belongsToMany(User::class, 'followers', 'follower_id', 'user_id');
+        return $this->belongsToMany(User::class, 'followers', 'follower_id', 'user_id');
     }
 
     public function follow($user_ids)
